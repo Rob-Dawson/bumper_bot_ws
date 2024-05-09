@@ -1,0 +1,6 @@
+# VSCode settings and properties
+.vscode/
+.settings/
+properties.json
+launch.json
+tasks.json
