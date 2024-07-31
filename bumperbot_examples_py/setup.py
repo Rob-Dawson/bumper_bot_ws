@@ -20,6 +20,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'simple_publisher = bumperbot_examples_py.simple_publisher:main',
+            'simple_subscriber = bumperbot_examples_py.simple_subscriber:main',
+            'simple_parameter = bumperbot_examples_py.simple_parameter:main',
         ],
     },
 )
