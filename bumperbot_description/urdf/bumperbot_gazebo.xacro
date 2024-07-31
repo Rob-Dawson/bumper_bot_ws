@@ -2,6 +2,22 @@
 
 <robot name="bumperbot" xmlns:xacro="http://ros.org/wiki/xacro">
 
+  <transmission name="wheel_right_transmission">
+    <plugin>transmission_interface/SImpleTransmission</plugin>
+    <actuator name="wheel_right_motor" roll="actuator_right"/>
+    <joint name="wheel_right_joint" roll="joint_right">
+      <mechanical_reduction>1.0</mechanical_reduction>
+    </joint>
+  </transmission>
+
+  <transmission name="wheel_left_transmission">
+    <plugin>transmission_interface/SImpleTransmission</plugin>
+    <joint name="wheel_left_joint" roll="joint_left">
+      <mechanical_reduction>1.0</mechanical_reduction>
+    </joint>
+    <actuator name="wheel_left_motor" roll="actuator_left"/>
+  </transmission>
+
   <gazebo reference="wheel_right_link">
     <mu1>100000000000000.0</mu1>
     <mu2>100000000000000.0</mu2>
@@ -39,5 +55,13 @@
     <minDepth>0.001</minDepth>
     <minVel>0.1</minVel>
   </gazebo> 
+
+  <gazebo>
+    <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+      <robot_param>robot_description</robot_param>
+      <robot_param_node>robot_state_publisher</robot_param_node>
+      <parameters></parameters>
+    </plugin>
+  </gazebo>
 
 </robot>
