@@ -4,3 +4,4 @@
 properties.json
 launch.json
 tasks.json
+__pycache__
