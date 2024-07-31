@@ -10,7 +10,7 @@ controller_manager:
       type: velocity_controllers/JointGroupVelocityController
 
 simple_velocity_controller:
-  ros__parameter:
+  ros__parameters:
     joints:
     - wheel_left_joint
     - wheel_right_joint
