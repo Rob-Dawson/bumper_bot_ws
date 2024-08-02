@@ -24,10 +24,15 @@ ament_target_dependencies(simple_subscriber rclcpp std_msgs)
 add_executable(simple_parameter src/simple_parameter.cpp)
 ament_target_dependencies(simple_parameter rclcpp rcl_interfaces)
 
+add_executable(turtlesim_kinematics src/turtlesim_kinematics.cpp)
+ament_target_dependencies(turtlesim_kinematics rclcpp)
+
+
 install(TARGETS
   simple_publisher
   simple_subscriber
   simple_parameter
+  turtlesim_kinematics
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
