@@ -10,6 +10,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(rcl_interfaces REQUIRED)
+find_package(turtlesim REQUIRED)
 # Include directories
 include_directories(
   include
@@ -25,7 +26,7 @@ add_executable(simple_parameter src/simple_parameter.cpp)
 ament_target_dependencies(simple_parameter rclcpp rcl_interfaces)
 
 add_executable(turtlesim_kinematics src/turtlesim_kinematics.cpp)
-ament_target_dependencies(turtlesim_kinematics rclcpp)
+ament_target_dependencies(turtlesim_kinematics rclcpp turtlesim)
 
 
 install(TARGETS
