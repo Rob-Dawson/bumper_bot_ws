@@ -53,7 +53,7 @@ Next is the paramChangeCallback which returns SetParameterResult message and tak
 Then you need to loop through the vectors and find the names of the params and check their type.
 */
 
-#include "simple_parameter.h"
+#include "simple_parameter.hpp"
 
 using std::placeholders::_1;
 

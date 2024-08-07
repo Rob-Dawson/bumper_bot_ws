@@ -1,4 +1,4 @@
-#include "subscriber.h"
+#include "subscriber.hpp"
 using std::placeholders::_1;
 
 SimpleSubscriber::SimpleSubscriber() : Node("simple_subscriber")

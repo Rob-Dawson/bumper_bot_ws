@@ -46,7 +46,7 @@ Finally, ros will need to be shutdown
 
 */
 
-#include <publisher.h>
+#include <publisher.hpp>
 
 SimplePublisher::SimplePublisher() 
     : Node("simple_publisher"), m_counter(0)
